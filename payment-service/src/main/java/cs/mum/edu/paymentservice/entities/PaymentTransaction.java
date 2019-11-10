@@ -10,11 +10,11 @@ import java.math.BigDecimal;
 @Setter
 @Getter
 @Entity
-public class Payment {
+public class PaymentTransaction {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
     private Double total;
 

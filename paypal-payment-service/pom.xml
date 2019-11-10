@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>cs.mum.edu</groupId>
-    <artifactId>paypal-payment-service</artifactId>
+    <artifactId>paypal-paymentTransaction-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>paypal-payment-service</name>
+    <name>paypal-paymentTransaction-service</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>

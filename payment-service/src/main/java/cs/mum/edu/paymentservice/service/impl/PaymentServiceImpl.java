@@ -1,9 +1,6 @@
 package cs.mum.edu.paymentservice.service.impl;
 
-import cs.mum.edu.paymentservice.model.BankAccount;
-import cs.mum.edu.paymentservice.model.CreditCard;
-import cs.mum.edu.paymentservice.entities.Payment;
-import cs.mum.edu.paymentservice.model.Paypal;
+import cs.mum.edu.paymentservice.entities.PaymentTransaction;
 import cs.mum.edu.paymentservice.repository.PaymentRepository;
 import cs.mum.edu.paymentservice.service.PaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,18 +12,18 @@ public class PaymentServiceImpl implements PaymentService {
     private PaymentRepository paymentRepository;
 
     @Override
-    public Payment createPayment(Payment payment) {
-//        switch (payment.getPaymentType()){
+    public PaymentTransaction createPayment(PaymentTransaction paymentTransaction) {
+//        switch (paymentTransaction.getPaymentType()){
 //            case Paypal:
-//                payment.setSuccessStatus(paypalService.processPayment(new Paypal(), payment));
+//                paymentTransaction.setSuccessStatus(paypalService.processPayment(new Paypal(), paymentTransaction));
 //                break;
 //            case BankAccount:
-//                payment.setSuccessStatus(bankAccountService.processPayment(new BankAccount(), payment));
+//                paymentTransaction.setSuccessStatus(bankAccountService.processPayment(new BankAccount(), paymentTransaction));
 //                break;
 //            case CreditCard:
-//                payment.setSuccessStatus(creditCardService.processPayment(new CreditCard(), payment));
+//                paymentTransaction.setSuccessStatus(creditCardService.processPayment(new CreditCard(), paymentTransaction));
 //                break;
 //        }
-        return paymentRepository.save(payment);
+        return paymentRepository.save(paymentTransaction);
     }
 }

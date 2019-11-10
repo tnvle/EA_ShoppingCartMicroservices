@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>cs.mum.edu</groupId>
-    <artifactId>payment-service</artifactId>
+    <artifactId>paymentTransaction-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>payment-service</name>
+    <name>paymentTransaction-service</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>

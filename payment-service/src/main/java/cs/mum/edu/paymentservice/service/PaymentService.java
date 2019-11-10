@@ -1,7 +1,7 @@
 package cs.mum.edu.paymentservice.service;
 
-import cs.mum.edu.paymentservice.entities.Payment;
+import cs.mum.edu.paymentservice.entities.PaymentTransaction;
 
 public interface PaymentService {
-    public Payment createPayment(Payment payment);
+    public PaymentTransaction createPayment(PaymentTransaction paymentTransaction);
 }

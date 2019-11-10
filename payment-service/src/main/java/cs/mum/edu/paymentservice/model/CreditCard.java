@@ -11,7 +11,7 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class CreditCard implements PaymentDTO {
+public class CreditCard implements Payment {
     private String cardname;
     private String cardnumber;
     private String cvv;
