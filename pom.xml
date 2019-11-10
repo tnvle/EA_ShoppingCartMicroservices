@@ -11,12 +11,12 @@
 
     <modules>
         <module>authentication-service</module>
-        <module>bankaccound-paymentTransaction-service</module>
+        <module>bankaccount-payment-service</module>
         <module>catalog-service</module>
-        <module>creditcard-paymentTransaction-service</module>
+        <module>creditcard-payment-service</module>
         <module>inventory-service</module>
         <module>order-service</module>
-        <module>paypal-paymentTransaction-service</module>
+        <module>paypal-payment-service</module>
         <module>shipping-service</module>
         <module>account-service</module>
     </modules>
