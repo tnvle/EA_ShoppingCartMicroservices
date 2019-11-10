@@ -1,6 +1,6 @@
 package cs.mum.edu.orderservice.repository;
 
-import cs.mum.edu.orderservice.model.Order;
+import cs.mum.edu.orderservice.entity.Order;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

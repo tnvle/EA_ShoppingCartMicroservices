@@ -6,16 +6,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="catalog-service" />
-        <module name="account-service" />
-        <module name="inventory-service" />
-        <module name="bankaccound-payment-service" />
-        <module name="payment-service" />
-        <module name="order-service" />
-        <module name="paypal-payment-service" />
-        <module name="shipping-service" />
-        <module name="authentication-service" />
         <module name="creditcard-payment-service" />
+        <module name="paymentTransaction-service" />
+        <module name="catalog-service" />
+        <module name="paypal-paymentTransaction-service" />
+        <module name="order-service" />
+        <module name="shipping-service" />
+        <module name="inventory-service" />
+        <module name="paypal-payment-service" />
+        <module name="account-service" />
+        <module name="creditcard-paymentTransaction-service" />
+        <module name="payment-service" />
+        <module name="authentication-service" />
+        <module name="bankaccound-payment-service" />
+        <module name="bankaccound-paymentTransaction-service" />
       </profile>
     </annotationProcessing>
   </component>
@@ -24,12 +28,16 @@
       <module name="account-service" options="-parameters" />
       <module name="authentication-service" options="-parameters" />
       <module name="bankaccound-payment-service" options="-parameters" />
+      <module name="bankaccound-paymentTransaction-service" options="-parameters" />
       <module name="catalog-service" options="-parameters" />
       <module name="creditcard-payment-service" options="-parameters" />
+      <module name="creditcard-paymentTransaction-service" options="-parameters" />
       <module name="inventory-service" options="-parameters" />
       <module name="order-service" options="-parameters" />
       <module name="payment-service" options="-parameters" />
+      <module name="paymentTransaction-service" options="-parameters" />
       <module name="paypal-payment-service" options="-parameters" />
+      <module name="paypal-paymentTransaction-service" options="-parameters" />
       <module name="shipping-service" options="-parameters" />
     </option>
   </component>

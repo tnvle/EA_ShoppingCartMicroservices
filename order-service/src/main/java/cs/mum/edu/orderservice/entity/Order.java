@@ -1,4 +1,4 @@
-package cs.mum.edu.orderservice.model;
+package cs.mum.edu.orderservice.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -20,9 +20,10 @@ public class Order {
 
     private String customerEmail;
 
-    private String customerAddress;
+    @OneToOne(cascade = CascadeType.ALL)
+    private Address address;
 
-    private String paymentId;
+    private Long paymentId;
 
     @Enumerated(EnumType.STRING)
     private OrderStatusType status;

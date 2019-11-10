@@ -1,4 +1,4 @@
-package cs.mum.edu.orderservice.model;
+package cs.mum.edu.orderservice.entity;
 
 
 public enum OrderStatusType

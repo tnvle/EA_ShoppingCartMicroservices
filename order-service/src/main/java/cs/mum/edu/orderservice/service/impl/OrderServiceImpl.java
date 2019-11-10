@@ -1,6 +1,6 @@
 package cs.mum.edu.orderservice.service.impl;
 
-import cs.mum.edu.orderservice.model.Order;
+import cs.mum.edu.orderservice.entity.Order;
 import cs.mum.edu.orderservice.repository.OrderRepository;
 import cs.mum.edu.orderservice.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
