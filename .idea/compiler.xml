@@ -12,6 +12,7 @@
         <module name="paypal-paymentTransaction-service" />
         <module name="order-service" />
         <module name="shipping-service" />
+        <module name="bankaccount-paymentTransaction-service" />
         <module name="inventory-service" />
         <module name="paypal-payment-service" />
         <module name="account-service" />
@@ -19,7 +20,6 @@
         <module name="payment-service" />
         <module name="authentication-service" />
         <module name="bankaccound-payment-service" />
-        <module name="bankaccound-paymentTransaction-service" />
       </profile>
     </annotationProcessing>
   </component>
@@ -28,7 +28,7 @@
       <module name="account-service" options="-parameters" />
       <module name="authentication-service" options="-parameters" />
       <module name="bankaccound-payment-service" options="-parameters" />
-      <module name="bankaccound-paymentTransaction-service" options="-parameters" />
+      <module name="bankaccount-paymentTransaction-service" options="-parameters" />
       <module name="catalog-service" options="-parameters" />
       <module name="creditcard-payment-service" options="-parameters" />
       <module name="creditcard-paymentTransaction-service" options="-parameters" />

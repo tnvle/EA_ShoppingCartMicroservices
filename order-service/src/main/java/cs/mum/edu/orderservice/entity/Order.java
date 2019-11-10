@@ -1,5 +1,6 @@
 package cs.mum.edu.orderservice.entity;
 
+import cs.mum.edu.orderservice.model.PaymentType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -22,6 +23,9 @@ public class Order {
 
     @OneToOne(cascade = CascadeType.ALL)
     private Address address;
+
+    @Enumerated(EnumType.STRING)
+    private PaymentType paymentType;
 
     private Long paymentId;
 
