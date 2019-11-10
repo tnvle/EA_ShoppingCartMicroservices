@@ -1,0 +1,21 @@
+
+
+localhost:8080/register
+
+{
+"username":"van2","password":"vanpass2",
+"address":{"street":"2000 N 4th St","city":"Fairfield","state":"IA","zipcode":"52557"},
+"credit":{"cardname":"Thi Nhat Van Le","cardnumber":"1234567891234","cvv":"234","expiration":"12/20","preferred":"true"},
+"bank":{"account":"123456789","preferred":"false"},
+"paypal":{"account":"vanle@gmail.com","preferred":"false"}
+}
+
+
+localhost:8080/authenticate
+
+{
+"username":"van","password":"vanpass"
+}
+
+localhost:8080/userinfo?id=1
+(put token in the authentication header)
