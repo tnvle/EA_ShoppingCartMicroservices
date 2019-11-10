@@ -11,10 +11,7 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class CreditCard  {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+public class CreditCard implements PaymentDTO {
     private String cardname;
     private String cardnumber;
     private String cvv;

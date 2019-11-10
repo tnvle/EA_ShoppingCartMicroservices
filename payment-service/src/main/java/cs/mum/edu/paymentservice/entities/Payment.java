@@ -1,5 +1,6 @@
-package cs.mum.edu.paymentservice.model;
+package cs.mum.edu.paymentservice.entities;
 
+import cs.mum.edu.paymentservice.model.PaymentType;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -15,10 +16,10 @@ public class Payment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    private BigDecimal total;
-
-    private Boolean successStatus;
+    private Double total;
 
     @Enumerated(EnumType.STRING)
     private PaymentType paymentType;
+
+    private Long transactionId;
 }

@@ -1,6 +1,6 @@
 package cs.mum.edu.paymentservice.repository;
 
-import cs.mum.edu.paymentservice.model.Payment;
+import cs.mum.edu.paymentservice.entities.Payment;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
