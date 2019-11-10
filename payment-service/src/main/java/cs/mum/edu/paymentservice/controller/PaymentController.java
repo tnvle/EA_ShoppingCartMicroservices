@@ -32,9 +32,9 @@ public class PaymentController {
     Long processPayment(@PathVariable("payment_type") String paymentType, @RequestBody PaymentDTO payment){
         String nextService;
         switch (paymentType){
-            case "BankAccount": nextService = nextBankAccountService;
-            case "CreditCard": nextService = nextCreditCardService;
-            case "Paypal": nextService = nextPaypalService;
+            case "BankAccount": nextService = nextBankAccountService;break;
+            case "CreditCard": nextService = nextCreditCardService;break;
+            case "Paypal": nextService = nextPaypalService;break;
             default: nextService = "";
 
         }
@@ -42,7 +42,7 @@ public class PaymentController {
         try{
             HttpHeaders headers = new HttpHeaders();
 //            headers.set("Authorization", token);
-            HttpEntity<Payment> entity = new HttpEntity<Payment>(payment.getPayment(), headers);
+            HttpEntity<PaymentDTO> entity = new HttpEntity<PaymentDTO>(payment, headers);
 
             RestTemplate restTemplate = new RestTemplate();
             ResponseEntity<Long> result =

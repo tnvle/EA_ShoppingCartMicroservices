@@ -1,4 +1,4 @@
-package cs.mum.edu.bankaccoundpaymentservice.model;
+package cs.mum.edu.bankaccoundpaymentservice.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -23,6 +23,6 @@ public class BankAccountTransaction {
     private Long id;
 
     private String bankAccount;
-    private BigDecimal total;
+    private Double total;
     private Date created;
 }
