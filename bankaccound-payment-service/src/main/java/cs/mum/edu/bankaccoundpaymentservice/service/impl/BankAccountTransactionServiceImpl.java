@@ -1,6 +1,6 @@
 package cs.mum.edu.bankaccoundpaymentservice.service.impl;
 
-import cs.mum.edu.bankaccoundpaymentservice.model.BankAccountTransaction;
+import cs.mum.edu.bankaccoundpaymentservice.entities.BankAccountTransaction;
 import cs.mum.edu.bankaccoundpaymentservice.repository.BankAccountTransactionRepository;
 import cs.mum.edu.bankaccoundpaymentservice.service.BankAccountTransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
