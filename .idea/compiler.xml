@@ -10,8 +10,8 @@
         <module name="paymentTransaction-service" />
         <module name="catalog-service" />
         <module name="paypal-paymentTransaction-service" />
-        <module name="order-service" />
         <module name="shipping-service" />
+        <module name="order-service" />
         <module name="bankaccount-paymentTransaction-service" />
         <module name="inventory-service" />
         <module name="paypal-payment-service" />
