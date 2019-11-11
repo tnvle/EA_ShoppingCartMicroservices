@@ -6,18 +6,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="shipping-service" />
         <module name="creditcard-payment-service" />
         <module name="paymentTransaction-service" />
         <module name="catalog-service" />
+        <module name="account-service" />
         <module name="paypal-paymentTransaction-service" />
-        <module name="shipping-service" />
+        <module name="payment-service" />
         <module name="order-service" />
         <module name="bankaccount-paymentTransaction-service" />
-        <module name="inventory-service" />
         <module name="paypal-payment-service" />
-        <module name="account-service" />
         <module name="creditcard-paymentTransaction-service" />
-        <module name="payment-service" />
+        <module name="inventory-service" />
         <module name="authentication-service" />
         <module name="bankaccound-payment-service" />
       </profile>
