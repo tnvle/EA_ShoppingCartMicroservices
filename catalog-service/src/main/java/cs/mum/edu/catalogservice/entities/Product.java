@@ -19,6 +19,7 @@ public class Product {
 
     private String vendor;
     private String category;
-    @Transient
-    private boolean inStock = true;
+//    @Transient
+    @Column(name = "quantityinstock")
+    private int quantityInStock;
 }

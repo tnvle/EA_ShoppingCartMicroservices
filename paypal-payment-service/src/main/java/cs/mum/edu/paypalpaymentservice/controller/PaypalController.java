@@ -23,6 +23,10 @@ public class PaypalController {
     @PostMapping("/process")
     public @ResponseBody
     Long processPayment(@RequestBody PaymentDTO paymentDTO, @RequestHeader(name="APIKey", required = false) String apikey){
+
+        if(apikey == null || apikey.trim().length()== 0)
+            return Long.valueOf(-2);
+
         //verify API token
         if(this.apiKey.compareTo(apikey)!=0)
             return Long.valueOf(-1);

@@ -1,1 +1,1 @@
-insert into user(username, password) values('van', '$2a$10$dBOf44mPiQvdhxrFH6lS3u8Ge68szjZqHN3gO4lgD37npEqqfnmxy')
+-- insert into user(username, password) values('van', '$2a$10$dBOf44mPiQvdhxrFH6lS3u8Ge68szjZqHN3gO4lgD37npEqqfnmxy')

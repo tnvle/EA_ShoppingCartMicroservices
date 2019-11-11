@@ -1,6 +1,7 @@
 package cs.mum.edu.accountservice.controllers;
 
 import cs.mum.edu.accountservice.entities.User;
+import cs.mum.edu.accountservice.model.UserCredental;
 import cs.mum.edu.accountservice.model.UserDTO;
 //import cs.mum.edu.accountservice.outerservices.AuthenticateServiceClient;
 import cs.mum.edu.accountservice.services.UserService;
@@ -18,25 +19,44 @@ public class UserController {
 //    @Autowired
 //    private AuthenticateServiceClient authenticateServiceClient;
 
-    @Value("${NEXT_SERVICE:localhost:8888/validatetoken}")
-    private String nextService;
+    @Value("${AUTHENTICATE_SERVICE:localhost:8888}")
+    private String authenticateService;
 
-    @GetMapping({"/secret"})
-    public String firstPage() {
-        return "You are an authenticated user";
-    }
 
     @PostMapping("/register")
     public ResponseEntity<?> saveUser(@RequestBody User user) throws Exception {
-        User newUser = userService.saveUser(user);
-        return ResponseEntity.ok("user added with id:" + newUser.getId());
+
+        UserCredental userCredental = new UserCredental();
+        userCredental.setUsername(user.getUsername());
+        userCredental.setPassword(user.getPassword());
+
+        userService.saveUser(user);
+
+        //send user authenticate to add into authentication service
+        final String uri = String.format("http://%s/addAuthenticate", authenticateService);
+        try{
+
+            HttpHeaders headers = new HttpHeaders();
+//            headers.set("Authorization", token);
+            HttpEntity<UserCredental> entity = new HttpEntity<UserCredental>(userCredental, headers);
+
+            RestTemplate restTemplate = new RestTemplate();
+            ResponseEntity<String> result =
+                    restTemplate.exchange(uri, HttpMethod.POST, entity, String.class);
+        }
+        catch (Exception e){
+            e.printStackTrace();
+            return ResponseEntity.ok("Unauthorized");
+        }
+
+        return ResponseEntity.ok("user added with id:" + user.getId());
     }
 
     @GetMapping({"/user/{id}"})
     public ResponseEntity<?> getPaymentMethods(@PathVariable(name = "id") String id, @RequestHeader(name="Authorization", required = false) String token) {
 //        boolean test = authenticateServiceClient.validateToken(request);
 
-        final String uri = String.format("http://%s/", nextService);
+        final String uri = String.format("http://%s/validatetoken", authenticateService);
 //        boolean result = false;
         try{
             HttpHeaders headers = new HttpHeaders();

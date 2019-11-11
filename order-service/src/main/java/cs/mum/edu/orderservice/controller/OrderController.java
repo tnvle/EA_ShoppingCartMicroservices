@@ -33,6 +33,9 @@ public class OrderController {
     @Value("${SHIPPING_SERVICE:localhost:8086}")
     private String shippingService;
 
+    @Value("${CATALOG_SERVICE:localhost:8111}")
+    private String catalogService;
+
     @PostMapping("/add")
     public @ResponseBody
     ResponseEntity<?> createOrder(@RequestBody OrderDTO orderDTO, @RequestHeader(name="Authorization", required = false) String token) {
@@ -40,6 +43,7 @@ public class OrderController {
         final String authenticateURI = String.format("http://%s/validatetoken", authenticateService);
         final String paymentURI = String.format("http://%s/api/payment/%s", paymentService, orderDTO.getPaymentType().toString());
         final String shippingURI = String.format("http://%s/api/shipping", shippingService);
+
 
         try{
             //call authenticate service
@@ -52,6 +56,26 @@ public class OrderController {
                     restTemplate.exchange(authenticateURI, HttpMethod.GET, entity, Boolean.class);
 //            result = restTemplate.getForObject(uri, Boolean.class);
 //            restTemplate.postForObject(url, request, ResponseBean.class);
+
+            //validate product and quantity in catalog service
+            for(OrderItem orderItem: orderDTO.getItems()){
+                String catalogValidProductURI = String.format("http://%s/api/products/%d/checkValid/%d", catalogService, orderItem.getProductId(), orderItem.getQuantity());
+
+//                RestTemplate catalogRestTemplate = new RestTemplate();
+//                Integer validResult = catalogRestTemplate.getForObject(catalogValidProductURI, Integer.class);
+                HttpHeaders catalogHeaders = new HttpHeaders();
+//              catalogHeaders.set("Authorization", token);
+                HttpEntity<String> catalogEntity  = new HttpEntity<String>("", catalogHeaders);
+
+                RestTemplate catalogRestTemplate = new RestTemplate();
+                ResponseEntity<Integer> validResult = catalogRestTemplate.exchange(catalogValidProductURI, HttpMethod.GET, catalogEntity, Integer.class);
+
+                if(validResult.getBody() == -1)//product does not exist in the system
+                    return ResponseEntity.ok("product Id " + orderItem.getProductId() + " does not exist in the system");
+                if(validResult.getBody() == -2)//product quantity in stock is not enough for the order
+                    return ResponseEntity.ok("The quantity in stock of product Id " + orderItem.getProductId() + " is not enough for the order");
+            }
+
 
             //call payment service
             PaymentDTO paymentDTO = new PaymentDTO();
