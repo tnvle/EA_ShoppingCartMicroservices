@@ -1,10 +1,34 @@
 localhost:8084/api/orders/add
 
+ (test BankAccount)
+
 {
 "customerEmail":"van@gmail.com",
 "address":{"street":"2000 N 4th St","city":"Fairfield","state":"IA","zipcode":"52557"},
 "paymentType":"BankAccount",
 "payment":{"account":"123456789", "type":"BankAccount"},
+"items":[{"productId":"1","quantity":"2","productPrice":"15.0"}, {"productId":"2","quantity":"3","productPrice":"10.0"}],
+"total":"60.0"
+}
+
+(test CreditCard)
+
+{
+"customerEmail":"van@gmail.com",
+"address":{"street":"2000 N 4th St","city":"Fairfield","state":"IA","zipcode":"52557"},
+"paymentType":"CreditCard",
+"payment":{"cardname":"van", "cardnumber":"987654321", "type":"CreditCard"},
+"items":[{"productId":"1","quantity":"2","productPrice":"15.0"}, {"productId":"2","quantity":"3","productPrice":"10.0"}],
+"total":"60.0"
+}
+
+test Paypal
+
+{
+"customerEmail":"van@gmail.com",
+"address":{"street":"2000 N 4th St","city":"Fairfield","state":"IA","zipcode":"52557"},
+"paymentType":"Paypal",
+"payment":{"account":"111222333", "type":"Paypal"},
 "items":[{"productId":"1","quantity":"2","productPrice":"15.0"}, {"productId":"2","quantity":"3","productPrice":"10.0"}],
 "total":"60.0"
 }

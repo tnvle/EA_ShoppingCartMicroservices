@@ -64,7 +64,7 @@ public class PaymentController {
 
             Long transactionId = result.getBody();
             PaymentTransaction responsePayment = new PaymentTransaction();
-//            responsePayment.setPaymentType(paymentType);
+            responsePayment.setPaymentType(PaymentType.valueOf(paymentType));
             responsePayment.setTotal(payment.getTotal());
             responsePayment.setTransactionId(transactionId);
             responsePayment = paymentService.createPayment(responsePayment);
