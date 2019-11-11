@@ -17,3 +17,6 @@ spec:
     spec:
       containers:
         - name: ccpayment-service
+          image: islamahmad/ea02creditcardpayment:1.0.0
+            ports:
+                - containerPort: 8003

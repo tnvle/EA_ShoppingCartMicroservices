@@ -17,3 +17,6 @@ spec:
     spec:
       containers:
         - name: inventory-service
+          image: islamahmad/ea02inventory:1.0.0
+            ports:
+                - containerPort: 8004

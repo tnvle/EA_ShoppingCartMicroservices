@@ -17,3 +17,6 @@ spec:
     spec:
       containers:
         - name: account-service
+          image: islamahmad/ea02account:1.0.0
+            ports:
+              - containerPort: 8080

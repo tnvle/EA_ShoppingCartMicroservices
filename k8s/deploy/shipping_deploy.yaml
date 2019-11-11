@@ -17,3 +17,6 @@ spec:
     spec:
       containers:
         - name: shipping-service
+          image: islamahmad/ea02shipping:1.0.0
+            ports:
+                - containerPort: 8008

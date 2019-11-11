@@ -17,3 +17,6 @@ spec:
     spec:
       containers:
         - name: bankpayment-service
+          image: islamahmad/ea02bankpayment:1.0.0
+            ports:
+                - containerPort: 8001

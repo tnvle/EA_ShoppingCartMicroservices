@@ -17,3 +17,6 @@ spec:
     spec:
       containers:
         - name: order-service
+          image: islamahmad/ea02order:1.0.0
+            ports:
+                - containerPort: 8005

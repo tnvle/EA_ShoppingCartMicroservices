@@ -2,7 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fa2f120-c5bf-46f6-b459-0fe23b856209" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/deploy/account_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/account_deploy.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/deploy/authentication_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/authentication_deploy.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/deploy/bankpayment_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/bankpayment_deploy.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/deploy/catalogue_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/catalogue_deploy.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/deploy/ccpayment_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/ccpayment_deploy.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/deploy/inventory_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/inventory_deploy.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/deploy/order_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/order_deploy.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/deploy/payment_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/payment_deploy.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/deploy/pppayment_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/pppayment_deploy.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/deploy/shipping_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/shipping_deploy.yaml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,6 +42,9 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-12" />
     <option name="width" value="817" />
@@ -52,6 +66,9 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/k8s/secret" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -78,7 +95,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Docker.authenticationService">
+  <component name="RunManager" selected="Docker.paymentService">
     <configuration name="AccountServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="account-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="cs.mum.edu.accountservice.AccountServiceApplication" />
@@ -388,7 +405,17 @@
     <option name="allServicesViewState">
       <serviceView>
         <treeState>
-          <expand />
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@52617d6a" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@52617d6a" type="9fbbdea:ServiceModel$ServiceNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@7751a3fc" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+          </expand>
           <select />
         </treeState>
       </serviceView>
@@ -406,7 +433,7 @@
       <updated>1573257737373</updated>
       <workItem from="1573257742433" duration="56708000" />
       <workItem from="1573402364049" duration="11894000" />
-      <workItem from="1573442791322" duration="3844000" />
+      <workItem from="1573442791322" duration="4597000" />
     </task>
     <task id="LOCAL-00001" summary="building docker file and k8s files &#10;added ports to application.properties to bank, catalogue, ccpayment">
       <created>1573444697314</created>
@@ -429,7 +456,21 @@
       <option name="project" value="LOCAL" />
       <updated>1573446328175</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="updated docker files with target folders to build correctly">
+      <created>1573447226408</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1573447226408</updated>
+    </task>
+    <task id="LOCAL-00005" summary="updated docker files with target folders to build correctly">
+      <created>1573447333203</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1573447333204</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -447,6 +488,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="building docker file and k8s files &#10;added ports to application.properties to bank, catalogue, ccpayment" />
     <MESSAGE value="building docker file and k8s files &#10;added ports to application.properties to remaining services &#10;Docker files built for remaining microservices" />
     <MESSAGE value="updated docker files with target folders to build correctly" />
@@ -535,21 +577,5 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>

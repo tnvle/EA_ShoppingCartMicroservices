@@ -17,3 +17,6 @@ spec:
     spec:
       containers:
         - name: pppayment-service
+          image: islamahmad/ea02paypalpayment:1.0.0
+            ports:
+                - containerPort: 8007
