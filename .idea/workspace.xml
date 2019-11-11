@@ -3,15 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="3fa2f120-c5bf-46f6-b459-0fe23b856209" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/creditcard-payment-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/creditcard-payment-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/account.Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/account.Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/authentication.Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/authentication.Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/bankpayment.Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/bankpayment.Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/catalogue.Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/catalogue.Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker/ccpayment.Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/ccpayment.Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker/inventory.Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/inventory.Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker/order.Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/order.Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker/payment.Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/payment.Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker/pppayment.Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/pppayment.Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker/shipping.Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/shipping.Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/paypal-payment-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/paypal-payment-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -86,7 +87,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.BankaccoundPaymentServiceApplication">
+  <component name="RunManager" selected="Docker.accountService">
     <configuration name="AccountServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="account-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="cs.mum.edu.accountservice.AccountServiceApplication" />
@@ -151,12 +152,13 @@
     </configuration>
     <configuration name="OrderServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="order-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="cs.mum.edu.orderservice.OrderServiceApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cs.mum.edu.orderservice" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PaymentApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="PaymentApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="paymentTransaction-service" />
       <extension name="coverage">
         <pattern>
@@ -204,7 +206,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="accountService" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="buildCliOptions" value="" />
+          <option name="command" value="" />
+          <option name="containerName" value="" />
+          <option name="contextFolderPath" value="account-service" />
+          <option name="entrypoint" value="" />
+          <option name="imageTag" value="islamahmad/ea02account:1.0.0" />
+          <option name="commandLineOptions" value="" />
+          <option name="sourceFilePath" value="docker/account.Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <list>
+      <item itemvalue="Docker.accountService" />
       <item itemvalue="Spring Boot.OrderServiceApplication" />
       <item itemvalue="Spring Boot.PaymentServiceApplication" />
       <item itemvalue="Spring Boot.ShippingServiceApplication" />
@@ -220,11 +238,6 @@
       <item itemvalue="Spring Boot.ShippingApplication" />
       <item itemvalue="Spring Boot.PaymentApplication (1)" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Spring Boot.PaymentApplication (1)" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="allServicesViewState">
@@ -248,7 +261,7 @@
       <updated>1573257737373</updated>
       <workItem from="1573257742433" duration="56708000" />
       <workItem from="1573402364049" duration="11894000" />
-      <workItem from="1573442791322" duration="2350000" />
+      <workItem from="1573442791322" duration="2975000" />
     </task>
     <task id="LOCAL-00001" summary="building docker file and k8s files &#10;added ports to application.properties to bank, catalogue, ccpayment">
       <created>1573444697314</created>
@@ -257,7 +270,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573444697314</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="building docker file and k8s files &#10;added ports to application.properties to remaining services &#10;Docker files built for remaining microservices">
+      <created>1573445260634</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1573445260634</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,7 +296,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="building docker file and k8s files &#10;added ports to application.properties to bank, catalogue, ccpayment" />
-    <option name="LAST_COMMIT_MESSAGE" value="building docker file and k8s files &#10;added ports to application.properties to bank, catalogue, ccpayment" />
+    <MESSAGE value="building docker file and k8s files &#10;added ports to application.properties to remaining services &#10;Docker files built for remaining microservices" />
+    <option name="LAST_COMMIT_MESSAGE" value="building docker file and k8s files &#10;added ports to application.properties to remaining services &#10;Docker files built for remaining microservices" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

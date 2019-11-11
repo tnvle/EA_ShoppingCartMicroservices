@@ -1,4 +1,4 @@
 FROM openjdk:8-jdk-alpine
 EXPOSE 8005
-COPY order.jar app.jar
+COPY target/order.jar app.jar
 ENTRYPOINT ENTRYPOINT ["java","-jar","/app.jar"]
