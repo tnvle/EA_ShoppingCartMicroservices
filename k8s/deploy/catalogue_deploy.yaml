@@ -17,3 +17,6 @@ spec:
     spec:
       containers:
         - name: catalogue-service
+          image: islamahmad/ea02catalogue:1.0.0
+            ports:
+                - containerPort: 8002

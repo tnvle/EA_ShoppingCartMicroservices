@@ -17,3 +17,6 @@ spec:
     spec:
       containers:
         - name: authentication-service
+          image: islamahmad/ea02authentication:1.0.0
+            ports:
+                - containerPort: 8888
