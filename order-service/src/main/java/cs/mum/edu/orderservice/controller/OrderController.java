@@ -4,6 +4,7 @@ import cs.mum.edu.orderservice.entity.Order;
 import cs.mum.edu.orderservice.entity.OrderStatusType;
 import cs.mum.edu.orderservice.model.OrderDTO;
 import cs.mum.edu.orderservice.model.PaymentDTO;
+import cs.mum.edu.orderservice.model.ShippingDTO;
 import cs.mum.edu.orderservice.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -23,12 +24,16 @@ public class OrderController {
     @Value("${PAYMENT_SERVICE:localhost:8885}")
     private String paymentService;
 
+    @Value("${SHIPPING_SERVICE:localhost:8086}")
+    private String shippingService;
+
     @PostMapping("/add")
     public @ResponseBody
-    ResponseEntity<Long> createOrder(@RequestBody OrderDTO orderDTO, @RequestHeader(name="Authorization", required = false) String token) {
+    ResponseEntity<?> createOrder(@RequestBody OrderDTO orderDTO, @RequestHeader(name="Authorization", required = false) String token) {
 
         final String authenticateURI = String.format("http://%s/validatetoken", authenticateService);
         final String paymentURI = String.format("http://%s/api/payment/%s", paymentService, orderDTO.getPaymentType().toString());
+        final String shippingURI = String.format("http://%s/api/shipping", shippingService);
 
         try{
             //call authenticate service
@@ -51,10 +56,10 @@ public class OrderController {
             HttpEntity<PaymentDTO> paymentEntity  = new HttpEntity<PaymentDTO>(paymentDTO, headers);
 
             restTemplate = new RestTemplate();
-            ResponseEntity<Long> paymentId =
-                    restTemplate.exchange(paymentURI, HttpMethod.POST, paymentEntity, Long.class);
+            ResponseEntity<Long> paymentId = restTemplate.exchange(paymentURI, HttpMethod.POST, paymentEntity, Long.class);
 
-            //shipping
+            if(paymentId.getBody() == -1)
+                return ResponseEntity.ok("Cannot process transaction!!!");
 
             //save Order
             Order order = new Order();
@@ -66,11 +71,30 @@ public class OrderController {
             order.setPaymentType(orderDTO.getPaymentType());
             orderService.save(order);
 
-            return ResponseEntity.ok(order.getId());
+            //shipping
+            ShippingDTO shippingDTO = new ShippingDTO();
+            shippingDTO.setOrderId(order.getId());
+            shippingDTO.setAddress(order.getAddress());
+            shippingDTO.setItemList(order.getItems());
+
+            headers = new HttpHeaders();
+//            headers.set("Authorization", token);
+            HttpEntity<ShippingDTO> shippingEntity  = new HttpEntity<ShippingDTO>(shippingDTO, headers);
+
+            restTemplate = new RestTemplate();
+            ResponseEntity<Long> shippingId = restTemplate.exchange(shippingURI, HttpMethod.POST, shippingEntity, Long.class);
+
+            if(paymentId.getBody() == -1)
+                return ResponseEntity.ok("Cannot process transaction!!!");
+
+
+
+
+            return ResponseEntity.ok(order);
         }
         catch (Exception e){
             e.printStackTrace();
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(Long.valueOf(-1));
+            return ResponseEntity.ok(HttpStatus.UNAUTHORIZED);
         }
 
     }

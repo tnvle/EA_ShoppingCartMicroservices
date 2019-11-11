@@ -18,7 +18,7 @@ public class ShippingItem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    private Long productCode;
-    private Integer quantity;
+    private Long productId;
+    private int quantity;
+    private double productPrice;
 }

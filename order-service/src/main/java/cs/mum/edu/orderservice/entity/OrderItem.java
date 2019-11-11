@@ -20,10 +20,10 @@ public class OrderItem {
     private Long id;
     private Long productId;
     private int quantity;
-    private BigDecimal productPrice;
+    private double productPrice;
 
-    public BigDecimal getPrice() {
-        return productPrice.multiply(new BigDecimal(quantity));
+    public double getPrice() {
+        return productPrice * quantity;
     }
 }
 

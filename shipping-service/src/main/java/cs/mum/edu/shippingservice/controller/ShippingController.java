@@ -14,8 +14,9 @@ public class ShippingController {
 
     @PostMapping
     public @ResponseBody
-    Shipping postShipping(@RequestBody Shipping shipping){
-        return shippingService.createShipping(shipping);
+    Long postShipping(@RequestBody Shipping shipping){
+        shippingService.save(shipping);
+        return shipping.getId();
     }
 
     @RequestMapping(value = "/process/{shipping_id}", method = RequestMethod.PUT)

@@ -13,7 +13,7 @@ public class ShippingServiceImpl implements ShippingService {
     private ShippingRepository shippingRepository;
 
     @Override
-    public Shipping createShipping(Shipping shipping) {
+    public Shipping save(Shipping shipping) {
         return shippingRepository.save(shipping);
     }
 
