@@ -3,7 +3,6 @@ kind: Deployment
 metadata:
   name: paypalpayment-service
   labels:
-    environment: dev
     app: paypalpayment-service
 spec:
   replicas: 1

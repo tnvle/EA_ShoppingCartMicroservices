@@ -7,3 +7,4 @@ create schema db_inventory;
 create schema db_order;
 create schema db_payment;
 create schema db_shipping;
+create schema db_paypal;
