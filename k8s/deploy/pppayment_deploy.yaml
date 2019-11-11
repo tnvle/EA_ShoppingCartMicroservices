@@ -1,22 +1,36 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pppayment-service
+  name: paypalpayment-service
   labels:
-    environment: dev
-    app: pppayment-service
+    app: paypalpayment-service
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: pppayment-service
+      app: paypalpayment-service
   template:
     metadata:
       labels:
-        app: pppayment-service
+        app: paypalpayment-service
     spec:
       containers:
-        - name: pppayment-service
+        - name: paypalpayment-service
           image: islamahmad/ea02paypalpayment:1.0.0
-            ports:
-                - containerPort: 8007
+          env:
+            - name: MYSQL_HOST
+              value: mysql
+            - name: MYSQL_USER
+              value: root
+            - name: MYSQL_PORT
+              value: "3306"
+            - name: SERVICE_API_KEY
+              valueFrom:
+                configMapKeyRef:
+                  name: paypalpayment-service
+                  key: SERVICE_API_KEY
+            - name: MYSQL_PASSWORD
+              valueFrom:
+                configMapKeyRef:
+                  name: paypalpayment-service
+                  key: MYSQL_PASSWORD
