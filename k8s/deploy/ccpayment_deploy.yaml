@@ -1,22 +1,36 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ccpayment-service
+  name: creditcardpayment-service
   labels:
-    environment: dev
-    app: ccpayment-service
+    app: creditcardpayment-service
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: ccpayment-service
+      app: creditcardpayment-service
   template:
     metadata:
       labels:
-        app: ccpayment-service
+        app: creditcardpayment-service
     spec:
       containers:
-        - name: ccpayment-service
+        - name: creditcardpayment-service
           image: islamahmad/ea02creditcardpayment:1.0.0
-            ports:
-                - containerPort: 8003
+          env:
+            - name: MYSQL_HOST
+              value: mysql
+            - name: MYSQL_USER
+              value: root
+            - name: MYSQL_PORT
+              value: "3306"
+            - name: SERVICE_API_KEY
+              valueFrom:
+                configMapKeyRef:
+                  name: creditcardpayment-service
+                  key: SERVICE_API_KEY
+            - name: MYSQL_PASSWORD
+              valueFrom:
+                configMapKeyRef:
+                  name: creditcardpayment-service
+                  key: MYSQL_PASSWORD

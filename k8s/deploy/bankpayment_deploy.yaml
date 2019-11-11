@@ -3,7 +3,6 @@ kind: Deployment
 metadata:
   name: bankpayment-service
   labels:
-    environment: dev
     app: bankpayment-service
 spec:
   replicas: 1
@@ -18,5 +17,20 @@ spec:
       containers:
         - name: bankpayment-service
           image: islamahmad/ea02bankpayment:1.0.0
-            ports:
-                - containerPort: 8001
+          env:
+              - name: MYSQL_HOST
+                value: mysql
+              - name: MYSQL_USER
+                value: root
+              - name: MYSQL_PORT
+                value: "3306"
+              - name: SERVICE_API_KEY
+                valueFrom:
+                  configMapKeyRef:
+                    name: bankpayment-service
+                    key: SERVICE_API_KEY
+              - name: MYSQL_PASSWORD
+                valueFrom:
+                  configMapKeyRef:
+                    name: bankpayment-service
+                    key: MYSQL_PASSWORD

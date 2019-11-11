@@ -2,9 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fa2f120-c5bf-46f6-b459-0fe23b856209" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/k8s/config/mysql_pv.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/deploy/mysql_deploy.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/service/mysql_svc.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/resources/import.sql" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/resources/import.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/config/bankpayment_config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/config/bankpayment_config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/config/ccpayment_config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/config/ccpayment_config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/config/pppayment_config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/config/pppayment_config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/deploy/bankpayment_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/bankpayment_deploy.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/deploy/ccpayment_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/ccpayment_deploy.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/deploy/pppayment_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/pppayment_deploy.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/secret/bankpayment_secret.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/secret/bankpayment_secret.yaml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,6 +32,10 @@
       <set />
     </option>
     <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="root@cloud" type="feb32156:DbDataSourceImpl" />
+      </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="root@cloudSQL" type="feb32156:DbDataSourceImpl" />
@@ -79,17 +91,19 @@
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/k8s/secret" />
-      <recent name="$PROJECT_DIR$/k8s/deploy" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/k8s/config" />
+      <recent name="$PROJECT_DIR$/k8s/service" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="D:\VAN\EA\PROJECT\MINI2\thu\mini2\mini2\order-service\src\main\resources\datatest" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="cs.mum.edu.bankaccoundpaymentservice.model" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="D:\VAN\EA\PROJECT\MINI2\thu\mini2\mini2\order-service\src\main\resources\datatest" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/k8s/secret" />
+      <recent name="$PROJECT_DIR$/k8s/deploy" />
+      <recent name="$PROJECT_DIR$/k8s/config" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -109,7 +123,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Docker.mysql">
+  <component name="RunManager" selected="Docker.paypalpaymentService">
     <configuration name="AccountServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="account-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="cs.mum.edu.accountservice.AccountServiceApplication" />
@@ -459,17 +473,21 @@
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@562b0e53" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@562b0e53" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@525b4cce" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
               <item name="com.intellij.execution.services.ServiceModel$ServiceNode@59b3e1f4" type="9fbbdea:ServiceModel$ServiceNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
               <item name="com.intellij.execution.services.ServiceModel$ServiceNode@59b3e1f4" type="9fbbdea:ServiceModel$ServiceNode" />
               <item name="com.intellij.execution.services.ServiceModel$ServiceNode@29d6980a" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@59b3e1f4" type="9fbbdea:ServiceModel$ServiceNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@52b43114" type="9fbbdea:ServiceModel$ServiceNode" />
             </path>
           </expand>
           <select />
@@ -491,7 +509,7 @@
       <workItem from="1573402364049" duration="11894000" />
       <workItem from="1573442791322" duration="5380000" />
       <workItem from="1573477824968" duration="1450000" />
-      <workItem from="1573479332166" duration="2161000" />
+      <workItem from="1573479332166" duration="6113000" />
     </task>
     <task id="LOCAL-00001" summary="building docker file and k8s files &#10;added ports to application.properties to bank, catalogue, ccpayment">
       <created>1573444697314</created>
@@ -556,7 +574,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573479956261</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="updated application.properties for inventory service">
+      <created>1573487144672</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1573487144672</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -584,7 +609,8 @@
     <MESSAGE value="scratch file to remember how to conenct to cloudSQL" />
     <MESSAGE value="added script to initialize the db schemas" />
     <MESSAGE value="updated docker files with new entrypoints" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated docker files with new entrypoints" />
+    <MESSAGE value="updated application.properties for inventory service" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated application.properties for inventory service" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
