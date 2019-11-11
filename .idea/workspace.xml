@@ -3,16 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3fa2f120-c5bf-46f6-b459-0fe23b856209" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/account.Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/account.Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/authentication.Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/authentication.Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/bankpayment.Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/bankpayment.Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/catalogue.Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/catalogue.Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/ccpayment.Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/ccpayment.Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/inventory.Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/inventory.Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/order.Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/order.Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/payment.Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/payment.Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/pppayment.Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/pppayment.Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/shipping.Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/shipping.Dockerfile" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -87,7 +77,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Docker.accountService">
+  <component name="RunManager" selected="Docker.authenticationService">
     <configuration name="AccountServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="account-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="cs.mum.edu.accountservice.AccountServiceApplication" />
@@ -210,8 +200,9 @@
       <deployment type="dockerfile">
         <settings>
           <option name="buildCliOptions" value="" />
+          <option name="buildOnly" value="true" />
           <option name="command" value="" />
-          <option name="containerName" value="" />
+          <option name="containerName" value="account-container" />
           <option name="contextFolderPath" value="account-service" />
           <option name="entrypoint" value="" />
           <option name="imageTag" value="islamahmad/ea02account:1.0.0" />
@@ -221,8 +212,161 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration name="authenticationService" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="buildCliOptions" value="" />
+          <option name="buildOnly" value="true" />
+          <option name="command" value="" />
+          <option name="containerName" value="authentication-container" />
+          <option name="contextFolderPath" value="authentication-service" />
+          <option name="entrypoint" value="" />
+          <option name="imageTag" value="islamahmad/ea02authentication:1.0.0" />
+          <option name="commandLineOptions" value="" />
+          <option name="sourceFilePath" value="docker/authentication.Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="bankpaymentService" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="buildCliOptions" value="" />
+          <option name="buildOnly" value="true" />
+          <option name="command" value="" />
+          <option name="containerName" value="bankpayment-container" />
+          <option name="contextFolderPath" value="bankaccount-payment-service" />
+          <option name="entrypoint" value="" />
+          <option name="imageTag" value="islamahmad/ea02bankpayment:1.0.0" />
+          <option name="commandLineOptions" value="" />
+          <option name="sourceFilePath" value="docker/bankpayment.Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="catalogueService" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="buildCliOptions" value="" />
+          <option name="buildOnly" value="true" />
+          <option name="command" value="" />
+          <option name="containerName" value="catalouge-container" />
+          <option name="contextFolderPath" value="catalog-service" />
+          <option name="entrypoint" value="" />
+          <option name="imageTag" value="islamahmad/ea02catalogue:1.0.0" />
+          <option name="commandLineOptions" value="" />
+          <option name="sourceFilePath" value="docker/catalogue.Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="creditcardpaymentService" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="buildCliOptions" value="" />
+          <option name="buildOnly" value="true" />
+          <option name="command" value="" />
+          <option name="containerName" value="creditpayment-container" />
+          <option name="contextFolderPath" value="creditcard-payment-service" />
+          <option name="entrypoint" value="" />
+          <option name="imageTag" value="islamahmad/ea02creditcardpayment:1.0.0" />
+          <option name="commandLineOptions" value="" />
+          <option name="sourceFilePath" value="docker/ccpayment.Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="inventoryService" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="buildCliOptions" value="" />
+          <option name="buildOnly" value="true" />
+          <option name="command" value="" />
+          <option name="containerName" value="inventory-container" />
+          <option name="contextFolderPath" value="inventory-service" />
+          <option name="entrypoint" value="" />
+          <option name="imageTag" value="islamahmad/ea02inventory:1.0.0" />
+          <option name="commandLineOptions" value="" />
+          <option name="sourceFilePath" value="docker/inventory.Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="orderService" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="buildCliOptions" value="" />
+          <option name="buildOnly" value="true" />
+          <option name="command" value="" />
+          <option name="containerName" value="order-container" />
+          <option name="contextFolderPath" value="order-service" />
+          <option name="entrypoint" value="" />
+          <option name="imageTag" value="islamahmad/ea02order:1.0.0" />
+          <option name="commandLineOptions" value="" />
+          <option name="sourceFilePath" value="docker/order.Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="paymentService" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="buildCliOptions" value="" />
+          <option name="buildOnly" value="true" />
+          <option name="command" value="" />
+          <option name="containerName" value="payment-container" />
+          <option name="contextFolderPath" value="payment-service" />
+          <option name="entrypoint" value="" />
+          <option name="imageTag" value="islamahmad/ea02payment:1.0.0" />
+          <option name="commandLineOptions" value="" />
+          <option name="sourceFilePath" value="docker/payment.Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="paypalpaymentService" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="buildCliOptions" value="" />
+          <option name="buildOnly" value="true" />
+          <option name="command" value="" />
+          <option name="containerName" value="paypalpayment-container" />
+          <option name="contextFolderPath" value="paypal-payment-service" />
+          <option name="entrypoint" value="" />
+          <option name="imageTag" value="islamahmad/ea02paypalpayment1.0.0" />
+          <option name="commandLineOptions" value="" />
+          <option name="sourceFilePath" value="docker/pppayment.Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="shippingService" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="buildCliOptions" value="" />
+          <option name="buildOnly" value="true" />
+          <option name="command" value="" />
+          <option name="containerName" value="shipping-container" />
+          <option name="contextFolderPath" value="shipping-service" />
+          <option name="entrypoint" value="" />
+          <option name="imageTag" value="islamahmad/ea02shipping:1.0.0" />
+          <option name="commandLineOptions" value="" />
+          <option name="sourceFilePath" value="docker/shipping.Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <list>
+      <item itemvalue="Docker.creditcardpaymentService" />
+      <item itemvalue="Docker.inventoryService" />
+      <item itemvalue="Docker.orderService" />
+      <item itemvalue="Docker.paymentService" />
+      <item itemvalue="Docker.paypalpaymentService" />
+      <item itemvalue="Docker.shippingService" />
       <item itemvalue="Docker.accountService" />
+      <item itemvalue="Docker.bankpaymentService" />
+      <item itemvalue="Docker.catalogueService" />
+      <item itemvalue="Docker.authenticationService" />
       <item itemvalue="Spring Boot.OrderServiceApplication" />
       <item itemvalue="Spring Boot.PaymentServiceApplication" />
       <item itemvalue="Spring Boot.ShippingServiceApplication" />
@@ -261,7 +405,7 @@
       <updated>1573257737373</updated>
       <workItem from="1573257742433" duration="56708000" />
       <workItem from="1573402364049" duration="11894000" />
-      <workItem from="1573442791322" duration="2975000" />
+      <workItem from="1573442791322" duration="3844000" />
     </task>
     <task id="LOCAL-00001" summary="building docker file and k8s files &#10;added ports to application.properties to bank, catalogue, ccpayment">
       <created>1573444697314</created>
@@ -277,7 +421,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573445260634</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="updated docker files with target folders to build correctly">
+      <created>1573446328175</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1573446328175</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -297,7 +448,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="building docker file and k8s files &#10;added ports to application.properties to bank, catalogue, ccpayment" />
     <MESSAGE value="building docker file and k8s files &#10;added ports to application.properties to remaining services &#10;Docker files built for remaining microservices" />
-    <option name="LAST_COMMIT_MESSAGE" value="building docker file and k8s files &#10;added ports to application.properties to remaining services &#10;Docker files built for remaining microservices" />
+    <MESSAGE value="updated docker files with target folders to build correctly" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated docker files with target folders to build correctly" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
