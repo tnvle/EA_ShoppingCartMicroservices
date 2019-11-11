@@ -2,28 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fa2f120-c5bf-46f6-b459-0fe23b856209" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/docker/account.Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/authentication.Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/bankpayment.Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/catalogue.Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/ccpayment.Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/inventory.Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/order.Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/payment.Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/pppayment.Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/shipping.Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/k8s/config/account_config.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/k8s/config/authentication_config.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/k8s/config/bankpayment_config.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/k8s/config/catalogue_config.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/k8s/config/ccpayment_config.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/k8s/config/inventory_config.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/k8s/config/order_config.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/k8s/config/payment_config.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/k8s/config/pppayment_config.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/k8s/config/shipping_config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/account-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/catalog-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/account.Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/account.Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/authentication.Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/authentication.Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/bankpayment.Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/bankpayment.Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/catalogue.Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/catalogue.Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/deploy/account_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/account_deploy.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/deploy/authentication_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/authentication_deploy.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/deploy/bankpayment_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/bankpayment_deploy.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/deploy/catalogue_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/catalogue_deploy.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/deploy/ccpayment_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/ccpayment_deploy.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/deploy/inventory_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/inventory_deploy.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/deploy/order_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/order_deploy.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/deploy/payment_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/payment_deploy.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/deploy/pppayment_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/pppayment_deploy.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/deploy/shipping_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/shipping_deploy.yaml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -75,6 +70,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/k8s/secret" />
+      <recent name="$PROJECT_DIR$/k8s/deploy" />
       <recent name="$PROJECT_DIR$/k8s/config" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -258,7 +255,7 @@
       <updated>1573257737373</updated>
       <workItem from="1573257742433" duration="56708000" />
       <workItem from="1573402364049" duration="11894000" />
-      <workItem from="1573442791322" duration="727000" />
+      <workItem from="1573442791322" duration="1791000" />
     </task>
     <servers />
   </component>

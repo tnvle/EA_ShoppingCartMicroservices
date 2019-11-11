@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bankpayment-service
+  labels:
+    environment: dev
+    app: bankpayment-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bankpayment-service
+  template:
+    metadata:
+      labels:
+        app: bankpayment-service
+    spec:
+      containers:
+        - name: bankpayment-service

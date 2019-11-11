@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ccpayment-service
+  labels:
+    environment: dev
+    app: ccpayment-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ccpayment-service
+  template:
+    metadata:
+      labels:
+        app: ccpayment-service
+    spec:
+      containers:
+        - name: ccpayment-service

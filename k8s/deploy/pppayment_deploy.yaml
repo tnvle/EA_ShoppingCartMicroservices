@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pppayment-service
+  labels:
+    environment: dev
+    app: pppayment-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pppayment-service
+  template:
+    metadata:
+      labels:
+        app: pppayment-service
+    spec:
+      containers:
+        - name: pppayment-service
