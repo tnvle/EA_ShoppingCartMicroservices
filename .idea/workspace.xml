@@ -3,22 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="3fa2f120-c5bf-46f6-b459-0fe23b856209" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/account-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/catalog-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/account.Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/account.Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/authentication.Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/authentication.Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/bankpayment.Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/bankpayment.Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/catalogue.Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/catalogue.Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/deploy/account_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/account_deploy.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/deploy/authentication_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/authentication_deploy.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/deploy/bankpayment_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/bankpayment_deploy.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/deploy/catalogue_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/catalogue_deploy.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/deploy/ccpayment_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/ccpayment_deploy.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/deploy/inventory_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/inventory_deploy.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/deploy/order_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/order_deploy.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/deploy/payment_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/payment_deploy.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/deploy/pppayment_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/pppayment_deploy.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/deploy/shipping_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/shipping_deploy.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creditcard-payment-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/creditcard-payment-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/ccpayment.Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/ccpayment.Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/inventory.Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/inventory.Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/order.Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/order.Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/payment.Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/payment.Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/pppayment.Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/pppayment.Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/shipping.Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/shipping.Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paypal-payment-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/paypal-payment-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -255,8 +248,16 @@
       <updated>1573257737373</updated>
       <workItem from="1573257742433" duration="56708000" />
       <workItem from="1573402364049" duration="11894000" />
-      <workItem from="1573442791322" duration="1791000" />
+      <workItem from="1573442791322" duration="2350000" />
     </task>
+    <task id="LOCAL-00001" summary="building docker file and k8s files &#10;added ports to application.properties to bank, catalogue, ccpayment">
+      <created>1573444697314</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1573444697314</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,6 +273,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="building docker file and k8s files &#10;added ports to application.properties to bank, catalogue, ccpayment" />
+    <option name="LAST_COMMIT_MESSAGE" value="building docker file and k8s files &#10;added ports to application.properties to bank, catalogue, ccpayment" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
