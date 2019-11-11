@@ -1,0 +1,6 @@
+run the following
+cloud_sql_proxy -instances=eaminiproj02-258521:us-central1:ea02=tcp:3309 -credential_file=cloudsql_eaminiproj02-258521-3134cee60272.json
+from this folder
+/Users/i4/OneDrive - Maharishi University of Management/EA/Project
+to connect to cloudSQL through 3309 on localhost
+with root/complex password from Lastpass

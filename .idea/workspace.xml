@@ -2,24 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fa2f120-c5bf-46f6-b459-0fe23b856209" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/deploy/account_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/account_deploy.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/deploy/authentication_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/authentication_deploy.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/deploy/bankpayment_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/bankpayment_deploy.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/deploy/catalogue_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/catalogue_deploy.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/deploy/ccpayment_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/ccpayment_deploy.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/deploy/inventory_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/inventory_deploy.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/deploy/order_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/order_deploy.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/deploy/payment_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/payment_deploy.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/deploy/pppayment_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/pppayment_deploy.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/deploy/shipping_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/shipping_deploy.yaml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="root@cloudSQL" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
+    <select />
   </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
@@ -56,6 +64,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -63,6 +72,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="TEXT" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/k8s/secret" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -95,7 +105,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Docker.paymentService">
+  <component name="RunManager" selected="Docker.paypalpaymentService">
     <configuration name="AccountServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="account-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="cs.mum.edu.accountservice.AccountServiceApplication" />
@@ -351,7 +361,7 @@
           <option name="containerName" value="paypalpayment-container" />
           <option name="contextFolderPath" value="paypal-payment-service" />
           <option name="entrypoint" value="" />
-          <option name="imageTag" value="islamahmad/ea02paypalpayment1.0.0" />
+          <option name="imageTag" value="islamahmad/ea02paypalpayment:1.0.0" />
           <option name="commandLineOptions" value="" />
           <option name="sourceFilePath" value="docker/pppayment.Dockerfile" />
         </settings>
@@ -408,12 +418,16 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@52617d6a" type="9fbbdea:ServiceModel$ServiceNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@31e7c81d" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@31e7c81d" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@32c6f687" type="9fbbdea:ServiceModel$ServiceNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
               <item name="com.intellij.execution.services.ServiceModel$ServiceNode@52617d6a" type="9fbbdea:ServiceModel$ServiceNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@7751a3fc" type="9fbbdea:ServiceModel$ServiceNode" />
             </path>
           </expand>
           <select />
@@ -433,7 +447,7 @@
       <updated>1573257737373</updated>
       <workItem from="1573257742433" duration="56708000" />
       <workItem from="1573402364049" duration="11894000" />
-      <workItem from="1573442791322" duration="4597000" />
+      <workItem from="1573442791322" duration="5337000" />
     </task>
     <task id="LOCAL-00001" summary="building docker file and k8s files &#10;added ports to application.properties to bank, catalogue, ccpayment">
       <created>1573444697314</created>
@@ -470,7 +484,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573447333204</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="updated k8s deployemnt files">
+      <created>1573448082863</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1573448082863</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -492,7 +513,8 @@
     <MESSAGE value="building docker file and k8s files &#10;added ports to application.properties to bank, catalogue, ccpayment" />
     <MESSAGE value="building docker file and k8s files &#10;added ports to application.properties to remaining services &#10;Docker files built for remaining microservices" />
     <MESSAGE value="updated docker files with target folders to build correctly" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated docker files with target folders to build correctly" />
+    <MESSAGE value="updated k8s deployemnt files" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated k8s deployemnt files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
