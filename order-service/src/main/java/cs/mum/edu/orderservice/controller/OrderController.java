@@ -1,16 +1,22 @@
 package cs.mum.edu.orderservice.controller;
 
+import cs.mum.edu.orderservice.entity.Address;
 import cs.mum.edu.orderservice.entity.Order;
+import cs.mum.edu.orderservice.entity.OrderItem;
 import cs.mum.edu.orderservice.entity.OrderStatusType;
 import cs.mum.edu.orderservice.model.OrderDTO;
 import cs.mum.edu.orderservice.model.PaymentDTO;
 import cs.mum.edu.orderservice.model.ShippingDTO;
+import cs.mum.edu.orderservice.model.ShippingItem;
 import cs.mum.edu.orderservice.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/orders")
@@ -51,12 +57,12 @@ public class OrderController {
             PaymentDTO paymentDTO = new PaymentDTO();
             paymentDTO.setPayment(orderDTO.getPayment());
             paymentDTO.setTotal(orderDTO.getTotal());
-            headers = new HttpHeaders();
+            HttpHeaders paymentHeaders = new HttpHeaders();
 //            headers.set("Authorization", token);
-            HttpEntity<PaymentDTO> paymentEntity  = new HttpEntity<PaymentDTO>(paymentDTO, headers);
+            HttpEntity<PaymentDTO> paymentEntity  = new HttpEntity<PaymentDTO>(paymentDTO, paymentHeaders);
 
-            restTemplate = new RestTemplate();
-            ResponseEntity<Long> paymentId = restTemplate.exchange(paymentURI, HttpMethod.POST, paymentEntity, Long.class);
+            RestTemplate paymentRestTemplate = new RestTemplate();
+            ResponseEntity<Long> paymentId = paymentRestTemplate.exchange(paymentURI, HttpMethod.POST, paymentEntity, Long.class);
 
             if(paymentId.getBody() == -1)
                 return ResponseEntity.ok("Cannot process transaction!!!");
@@ -74,21 +80,33 @@ public class OrderController {
             //shipping
             ShippingDTO shippingDTO = new ShippingDTO();
             shippingDTO.setOrderId(order.getId());
-            shippingDTO.setAddress(order.getAddress());
-            shippingDTO.setItemList(order.getItems());
 
-            headers = new HttpHeaders();
+            Address address = new Address();
+            address.setCity(order.getAddress().getCity());
+            address.setState(order.getAddress().getState());
+            address.setStreet(order.getAddress().getStreet());
+            address.setZipcode(order.getAddress().getZipcode());
+            shippingDTO.setAddress(address);
+
+            List<ShippingItem> shippingItems = new ArrayList<>();
+            for(OrderItem orderItem:order.getItems()){
+                ShippingItem shippingItem = new ShippingItem();
+                shippingItem.setProductId(orderItem.getProductId());
+                shippingItem.setProductPrice(orderItem.getProductPrice());
+                shippingItem.setQuantity(orderItem.getQuantity());
+                shippingItems.add(shippingItem);
+            }
+            shippingDTO.setItemList(shippingItems);
+
+            HttpHeaders shippingHeaders = new HttpHeaders();
 //            headers.set("Authorization", token);
-            HttpEntity<ShippingDTO> shippingEntity  = new HttpEntity<ShippingDTO>(shippingDTO, headers);
+            HttpEntity<ShippingDTO> shippingEntity  = new HttpEntity<ShippingDTO>(shippingDTO, shippingHeaders);
 
-            restTemplate = new RestTemplate();
-            ResponseEntity<Long> shippingId = restTemplate.exchange(shippingURI, HttpMethod.POST, shippingEntity, Long.class);
+            RestTemplate shippingRestTemplate = new RestTemplate();
+            ResponseEntity<Long> shippingId = shippingRestTemplate.exchange(shippingURI, HttpMethod.POST, shippingEntity, Long.class);
 
-            if(paymentId.getBody() == -1)
-                return ResponseEntity.ok("Cannot process transaction!!!");
-
-
-
+            if(shippingId.getBody() == -1)
+                return ResponseEntity.ok("Cannot process shipping!!!");
 
             return ResponseEntity.ok(order);
         }

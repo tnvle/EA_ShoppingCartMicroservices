@@ -1,4 +1,4 @@
-package cs.mum.edu.orderservice.model;
+package cs.mum.edu.bankaccountpaymentservice.model;
 
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
@@ -8,9 +8,8 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
         include = JsonTypeInfo.As.PROPERTY,
         property = "type")
 @JsonSubTypes({
-        @JsonSubTypes.Type(value = BankAccount.class, name = "BankAccount"),
-        @JsonSubTypes.Type(value = CreditCard.class, name = "CreditCard"),
-        @JsonSubTypes.Type(value = Paypal.class, name = "Paypal")
+        @JsonSubTypes.Type(value = BankAccount.class, name = "BankAccount")
 })
 public interface Payment {
+
 }

@@ -14,8 +14,8 @@ public class BankAccountTransactionServiceImpl implements BankAccountTransaction
     private BankAccountTransactionRepository bankAccountTransactionRepository;
 
     @Override
-    public BankAccountTransaction createTransaction(BankAccountTransaction bankAccountTransaction) {
-        bankAccountTransaction.setCreated(new Date());
+    public BankAccountTransaction save(BankAccountTransaction bankAccountTransaction) {
+//        bankAccountTransaction.setCreated(new Date());
         return bankAccountTransactionRepository.save(bankAccountTransaction);
     }
 }

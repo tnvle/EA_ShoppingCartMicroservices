@@ -13,4 +13,5 @@ import javax.persistence.*;
 @AllArgsConstructor
 public class Paypal implements Payment{
     private String account;
+    private String type = Paypal.class.toString();
 }

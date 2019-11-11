@@ -1,6 +1,7 @@
 package cs.mum.edu.bankaccountpaymentservice.controller;
 
 import cs.mum.edu.bankaccountpaymentservice.entities.BankAccountTransaction;
+import cs.mum.edu.bankaccountpaymentservice.model.BankAccount;
 import cs.mum.edu.bankaccountpaymentservice.model.PaymentDTO;
 import cs.mum.edu.bankaccountpaymentservice.service.BankAccountTransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,9 +26,10 @@ public class BankAccountController {
             return Long.valueOf(-1);
 
         BankAccountTransaction transaction = new BankAccountTransaction();
-        transaction.setBankAccount(paymentDTO.getPayment().getAccount());
+        transaction.setBankAccount(((BankAccount)paymentDTO.getPayment()).getAccount());
         transaction.setTotal(paymentDTO.getTotal());
         transaction.setCreated(new Date());
-        return bankAccountTransactionService.createTransaction(transaction).getId();
+        bankAccountTransactionService.save(transaction);
+        return transaction.getId();
     }
 }

@@ -15,6 +15,7 @@ public class ShippingController {
     @PostMapping
     public @ResponseBody
     Long postShipping(@RequestBody Shipping shipping){
+        shipping.setStatus(ShippingStatus.SHIPPED);
         shippingService.save(shipping);
         return shipping.getId();
     }

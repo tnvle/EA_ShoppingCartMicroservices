@@ -11,5 +11,6 @@ import lombok.Setter;
 @AllArgsConstructor
 public class PaymentDTO {
     private Double total = 0.0;
-    private BankAccount payment;
+//    private BankAccount payment;
+    private Payment payment;
 }

@@ -22,6 +22,8 @@ public class Shipping {
     private Long id;
 
     private Long orderId;
+
+    @OneToOne(cascade = CascadeType.ALL)
     private Address address;
 
     @Enumerated(EnumType.STRING)

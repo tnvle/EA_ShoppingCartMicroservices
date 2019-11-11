@@ -22,5 +22,5 @@ public class ShippingDTO {
     private Long orderId;
     private Address address;
 
-    private List<OrderItem> itemList;
+    private List<ShippingItem> itemList;
 }

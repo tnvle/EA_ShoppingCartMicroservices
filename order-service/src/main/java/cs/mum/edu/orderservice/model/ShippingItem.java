@@ -1,4 +1,4 @@
-package cs.mum.edu.paymentservice.model;
+package cs.mum.edu.orderservice.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -11,7 +11,9 @@ import javax.persistence.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Paypal implements Payment{
-    private String account;
-    private String type = Paypal.class.toString();
+public class ShippingItem {
+
+    private Long productId;
+    private int quantity;
+    private double productPrice;
 }

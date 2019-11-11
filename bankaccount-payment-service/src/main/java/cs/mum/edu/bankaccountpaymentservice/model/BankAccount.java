@@ -5,12 +5,14 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class BankAccount {
+public class BankAccount implements Payment {
     private String account;
+    private String type = BankAccount.class.toString();
 }
 
 

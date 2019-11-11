@@ -16,4 +16,5 @@ public class CreditCard implements Payment {
     private String cardnumber;
     private String cvv;
     private String expiration;
+    private String type = CreditCard.class.toString();
 }

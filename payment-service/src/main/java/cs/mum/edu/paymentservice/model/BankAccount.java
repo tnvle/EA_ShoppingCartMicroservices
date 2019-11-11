@@ -11,5 +11,6 @@ import lombok.Setter;
 @AllArgsConstructor
 public class BankAccount implements Payment {
     private String account;
+    private String type = BankAccount.class.toString();
 }
 
