@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: shipping-service
-          image: islamahmad/ea02shipping:1.0.0
+          image: islamahmad/ea02shipping:1.0.1
           env:
             - name: MYSQL_HOST
               value: mysql

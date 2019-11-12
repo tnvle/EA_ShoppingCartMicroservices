@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: order-service
-          image: islamahmad/ea02order:1.0.0
+          image: islamahmad/ea02order:1.0.1
           env:
             - name: MYSQL_HOST
               value: mysql
@@ -50,3 +50,8 @@ spec:
                 configMapKeyRef:
                   name: order-service
                   key: SHIPPING_SERVICE
+            - name: CATALOG_SERVICE
+              valueFrom:
+                configMapKeyRef:
+                  name: order-service
+                  key: CATALOG_SERVICE

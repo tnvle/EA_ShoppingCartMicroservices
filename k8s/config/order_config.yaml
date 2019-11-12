@@ -9,3 +9,4 @@ data:
   AUTHENTICATE_SERVICE: authentication-service
   PAYMENT_SERVICE: payment-service
   SHIPPING_SERVICE: shipping-service
+  CATALOG_SERVICE: catalogue-service

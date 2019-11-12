@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: authentication-service
-          image: islamahmad/ea02authentication:1.0.1
+          image: islamahmad/ea02authentication:1.0.2
           env:
             - name: MYSQL_HOST
               value: mysql

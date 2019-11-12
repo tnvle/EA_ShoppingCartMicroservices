@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: payment-service
-          image: islamahmad/ea02payment:1.0.0
+          image: islamahmad/ea02payment:1.0.1
           env:
             - name: MYSQL_HOST
               value: mysql

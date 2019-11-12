@@ -2,25 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fa2f120-c5bf-46f6-b459-0fe23b856209" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/catalogue.Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/catalogue.Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/ccpayment.Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/ccpayment.Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/config/authentication_config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/config/authentication_config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/config/catalogue_config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/config/catalogue_config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/config/inventory_config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/config/inventory_config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/order.Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/order.Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/payment.Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/payment.Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/pppayment.Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/pppayment.Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/shipping.Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/shipping.Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/config/account_config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/config/account_config.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/k8s/config/order_config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/config/order_config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/config/payment_config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/config/payment_config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/config/shipping_config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/config/shipping_config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/deploy/account_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/account_deploy.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/k8s/deploy/authentication_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/authentication_deploy.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/deploy/catalogue_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/catalogue_deploy.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/deploy/ccpayment_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/ccpayment_deploy.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/deploy/inventory_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/inventory_deploy.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/k8s/deploy/order_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/order_deploy.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/k8s/deploy/payment_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/payment_deploy.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/k8s/deploy/pppayment_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/pppayment_deploy.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/k8s/deploy/shipping_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/shipping_deploy.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scratch.txt" beforeDir="false" afterPath="$PROJECT_DIR$/scratch.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,15 +34,6 @@
       <set />
     </option>
     <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="root@mysql_GKE" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="root@mysql_GKE" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="van@localhost" type="feb32156:DbDataSourceImpl" />
@@ -153,7 +138,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Docker.creditcardpaymentService">
+  <component name="RunManager" selected="Docker.shippingService">
     <configuration name="AccountServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="account-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="cs.mum.edu.accountservice.AccountServiceApplication" />
@@ -282,11 +267,12 @@
       <deployment type="dockerfile">
         <settings>
           <option name="buildCliOptions" value="" />
+          <option name="buildOnly" value="true" />
           <option name="command" value="" />
           <option name="containerName" value="account-container" />
           <option name="contextFolderPath" value="account-service" />
           <option name="entrypoint" value="" />
-          <option name="imageTag" value="islamahmad/ea02account:1.0.0" />
+          <option name="imageTag" value="islamahmad/ea02account:1.0.1" />
           <option name="publishAllPorts" value="true" />
           <option name="commandLineOptions" value="--net=host" />
           <option name="sourceFilePath" value="docker/account.Dockerfile" />
@@ -298,11 +284,12 @@
       <deployment type="dockerfile">
         <settings>
           <option name="buildCliOptions" value="" />
+          <option name="buildOnly" value="true" />
           <option name="command" value="" />
           <option name="containerName" value="authentication-container" />
           <option name="contextFolderPath" value="authentication-service" />
           <option name="entrypoint" value="" />
-          <option name="imageTag" value="islamahmad/ea02authentication:1.0.1" />
+          <option name="imageTag" value="islamahmad/ea02authentication:1.0.2" />
           <option name="publishAllPorts" value="true" />
           <option name="commandLineOptions" value="--net=host" />
           <option name="sourceFilePath" value="docker/authentication.Dockerfile" />
@@ -400,11 +387,12 @@
       <deployment type="dockerfile">
         <settings>
           <option name="buildCliOptions" value="" />
+          <option name="buildOnly" value="true" />
           <option name="command" value="" />
           <option name="containerName" value="order-container" />
           <option name="contextFolderPath" value="order-service" />
           <option name="entrypoint" value="" />
-          <option name="imageTag" value="islamahmad/ea02order:1.0.0" />
+          <option name="imageTag" value="islamahmad/ea02order:1.0.1" />
           <option name="publishAllPorts" value="true" />
           <option name="commandLineOptions" value="--net=host" />
           <option name="sourceFilePath" value="docker/order.Dockerfile" />
@@ -416,11 +404,12 @@
       <deployment type="dockerfile">
         <settings>
           <option name="buildCliOptions" value="" />
+          <option name="buildOnly" value="true" />
           <option name="command" value="" />
           <option name="containerName" value="payment-container" />
           <option name="contextFolderPath" value="payment-service" />
           <option name="entrypoint" value="" />
-          <option name="imageTag" value="islamahmad/ea02payment:1.0.0" />
+          <option name="imageTag" value="islamahmad/ea02payment:1.0.1" />
           <option name="publishAllPorts" value="true" />
           <option name="commandLineOptions" value="--net=host" />
           <option name="sourceFilePath" value="docker/payment.Dockerfile" />
@@ -437,7 +426,7 @@
           <option name="containerName" value="paypalpayment-container" />
           <option name="contextFolderPath" value="paypal-payment-service" />
           <option name="entrypoint" value="" />
-          <option name="imageTag" value="islamahmad/ea02paypalpayment:1.0.1" />
+          <option name="imageTag" value="islamahmad/ea02paypalpayment:1.0.2" />
           <option name="publishAllPorts" value="true" />
           <option name="commandLineOptions" value="--net=host" />
           <option name="sourceFilePath" value="docker/pppayment.Dockerfile" />
@@ -449,11 +438,12 @@
       <deployment type="dockerfile">
         <settings>
           <option name="buildCliOptions" value="" />
+          <option name="buildOnly" value="true" />
           <option name="command" value="" />
           <option name="containerName" value="shipping-container" />
           <option name="contextFolderPath" value="shipping-service" />
           <option name="entrypoint" value="" />
-          <option name="imageTag" value="islamahmad/ea02shipping:1.0.0" />
+          <option name="imageTag" value="islamahmad/ea02shipping:1.0.1" />
           <option name="publishAllPorts" value="true" />
           <option name="commandLineOptions" value="--net=host" />
           <option name="sourceFilePath" value="docker/shipping.Dockerfile" />
@@ -529,7 +519,7 @@
       <workItem from="1573402364049" duration="11894000" />
       <workItem from="1573442791322" duration="5380000" />
       <workItem from="1573477824968" duration="1450000" />
-      <workItem from="1573479332166" duration="14918000" />
+      <workItem from="1573479332166" duration="18181000" />
     </task>
     <task id="LOCAL-00001" summary="building docker file and k8s files &#10;added ports to application.properties to bank, catalogue, ccpayment">
       <created>1573444697314</created>
@@ -615,7 +605,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573497553547</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="update ports in docker files , stage 1">
+      <created>1573518227583</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1573518227583</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -645,7 +642,8 @@
     <MESSAGE value="updated docker files with new entrypoints" />
     <MESSAGE value="updated application.properties for inventory service" />
     <MESSAGE value="a lot of updates in docker files, new yaml files, and let's hope for the best" />
-    <option name="LAST_COMMIT_MESSAGE" value="a lot of updates in docker files, new yaml files, and let's hope for the best" />
+    <MESSAGE value="update ports in docker files , stage 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="update ports in docker files , stage 1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -657,11 +655,6 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/account-service/src/main/java/cs/mum/edu/accountservice/controllers/UserController.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/account-service/src/main/java/cs/mum/edu/accountservice/controllers/UserController.java</url>
           <line>85</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
@@ -669,16 +662,6 @@
           <url>file://$PROJECT_DIR$/authentication-service/src/main/java/cs/mum/edu/authenticationservice/config/JwtRequestFilter.java</url>
           <line>69</line>
           <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/account-service/src/main/java/cs/mum/edu/accountservice/controllers/UserController.java</url>
-          <line>58</line>
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/account-service/src/main/java/cs/mum/edu/accountservice/controllers/UserController.java</url>
-          <line>66</line>
-          <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/account-service/src/main/java/cs/mum/edu/accountservice/controllers/UserController.java</url>
