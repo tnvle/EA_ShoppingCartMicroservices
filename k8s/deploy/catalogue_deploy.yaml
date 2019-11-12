@@ -17,6 +17,21 @@ spec:
     spec:
       containers:
         - name: catalogue-service
-          image: islamahmad/ea02catalogue:1.0.0
-            ports:
-                - containerPort: 8002
+          image: islamahmad/ea02catalogue:1.0.1
+          env:
+            - name: MYSQL_HOST
+              value: mysql
+            - name: MYSQL_USER
+              value: root
+            - name: MYSQL_PORT
+              value: "3306"
+            - name: SERVICE_API_KEY
+              valueFrom:
+                configMapKeyRef:
+                  name: catalogue-service
+                  key: SERVICE_API_KEY
+            - name: MYSQL_PASSWORD
+              valueFrom:
+                configMapKeyRef:
+                  name: catalogue-service
+                  key: MYSQL_PASSWORD

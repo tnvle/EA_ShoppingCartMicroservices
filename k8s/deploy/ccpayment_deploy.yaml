@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: creditcardpayment-service
-          image: islamahmad/ea02creditcardpayment:1.0.0
+          image: islamahmad/ea02creditcardpayment:1.0.1
           env:
             - name: MYSQL_HOST
               value: mysql

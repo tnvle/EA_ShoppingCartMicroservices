@@ -17,6 +17,26 @@ spec:
     spec:
       containers:
         - name: authentication-service
-          image: islamahmad/ea02authentication:1.0.0
-            ports:
-                - containerPort: 8888
+          image: islamahmad/ea02authentication:1.0.1
+          env:
+            - name: MYSQL_HOST
+              value: mysql
+            - name: MYSQL_USER
+              value: root
+            - name: MYSQL_PORT
+              value: "3306"
+            - name: SERVICE_API_KEY
+              valueFrom:
+                configMapKeyRef:
+                  name: authentication-service
+                  key: SERVICE_API_KEY
+            - name: MYSQL_PASSWORD
+              valueFrom:
+                configMapKeyRef:
+                  name: authentication-service
+                  key: MYSQL_PASSWORD
+            - name: JWT_SECRET
+              valueFrom:
+                configMapKeyRef:
+                  name: authentication-service
+                  key: JWT_SECRET
