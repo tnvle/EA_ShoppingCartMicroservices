@@ -18,5 +18,35 @@ spec:
       containers:
         - name: order-service
           image: islamahmad/ea02order:1.0.0
-            ports:
-                - containerPort: 8005
+          env:
+            - name: MYSQL_HOST
+              value: mysql
+            - name: MYSQL_USER
+              value: root
+            - name: MYSQL_PORT
+              value: "3306"
+            - name: SERVICE_API_KEY
+              valueFrom:
+                configMapKeyRef:
+                  name: order-service
+                  key: SERVICE_API_KEY
+            - name: MYSQL_PASSWORD
+              valueFrom:
+                configMapKeyRef:
+                  name: order-service
+                  key: MYSQL_PASSWORD
+            - name: AUTHENTICATE_SERVICE
+              valueFrom:
+                configMapKeyRef:
+                  name: order-service
+                  key: AUTHENTICATE_SERVICE
+            - name: PAYMENT_SERVICE
+              valueFrom:
+                configMapKeyRef:
+                  name: order-service
+                  key: PAYMENT_SERVICE
+            - name: SHIPPING_SERVICE
+              valueFrom:
+                configMapKeyRef:
+                  name: order-service
+                  key: SHIPPING_SERVICE

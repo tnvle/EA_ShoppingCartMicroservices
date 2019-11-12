@@ -18,5 +18,35 @@ spec:
       containers:
         - name: payment-service
           image: islamahmad/ea02payment:1.0.0
-            ports:
-                - containerPort: 8006
+          env:
+            - name: MYSQL_HOST
+              value: mysql
+            - name: MYSQL_USER
+              value: root
+            - name: MYSQL_PORT
+              value: "3306"
+            - name: SERVICE_API_KEY
+              valueFrom:
+                configMapKeyRef:
+                  name: payment-service
+                  key: SERVICE_API_KEY
+            - name: MYSQL_PASSWORD
+              valueFrom:
+                configMapKeyRef:
+                  name: payment-service
+                  key: MYSQL_PASSWORD
+            - name: bankaccountsvc
+              valueFrom:
+                configMapKeyRef:
+                  name: payment-service
+                  key: bankaccountsvc
+            - name: creditcardsvc
+              valueFrom:
+                configMapKeyRef:
+                  name: payment-service
+                  key: creditcardsvc
+            - name: paypalsvc
+              valueFrom:
+                configMapKeyRef:
+                  name: payment-service
+                  key: paypalsvc

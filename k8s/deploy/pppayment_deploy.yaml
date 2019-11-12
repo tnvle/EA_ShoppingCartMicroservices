@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: paypalpayment-service
-          image: islamahmad/ea02paypalpayment:1.0.0
+          image: islamahmad/ea02paypalpayment:1.0.1
           env:
             - name: MYSQL_HOST
               value: mysql

@@ -4,3 +4,8 @@ from this folder
 /Users/i4/OneDrive - Maharishi University of Management/EA/Project
 to connect to cloudSQL through 3309 on localhost
 with root/complex password from Lastpass
+
+
+expose mysql service to local host port 8080
+gcloud container clusters get-credentials eaproject --zone us-central1-a --project eaminiproj02-258521 \
+ && kubectl port-forward $(kubectl get pod --selector="app=mysql" --output jsonpath='{.items[0].metadata.name}') 8080:3306

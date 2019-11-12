@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: payment-service
+  namespace: default
+data:
+  MYSQL_PASSWORD: password
+  SERVICE_API_KEY: vanapikey
+  bankaccountsvc: bankpayment-service
+  creditcardsvc: creditcardpayment-service
+  paypalsvc: paypalpayment-service

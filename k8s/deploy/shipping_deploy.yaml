@@ -18,5 +18,20 @@ spec:
       containers:
         - name: shipping-service
           image: islamahmad/ea02shipping:1.0.0
-            ports:
-                - containerPort: 8008
+          env:
+            - name: MYSQL_HOST
+              value: mysql
+            - name: MYSQL_USER
+              value: root
+            - name: MYSQL_PORT
+              value: "3306"
+            - name: SERVICE_API_KEY
+              valueFrom:
+                configMapKeyRef:
+                  name: shipping-service
+                  key: SERVICE_API_KEY
+            - name: MYSQL_PASSWORD
+              valueFrom:
+                configMapKeyRef:
+                  name: shipping-service
+                  key: MYSQL_PASSWORD
