@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: account-service
-          image: islamahmad/ea02account:1.0.1
+          image: islamahmad/ea02account:1.0.2
           env:
             - name: MYSQL_HOST
               value: mysql
