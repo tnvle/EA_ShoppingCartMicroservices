@@ -3,7 +3,6 @@ kind: Deployment
 metadata:
   name: authentication-service
   labels:
-    environment: dev
     app: authentication-service
 spec:
   replicas: 1

@@ -3,7 +3,6 @@ kind: Deployment
 metadata:
   name: account-service
   labels:
-    environment: dev
     app: account-service
 spec:
   replicas: 1
@@ -28,18 +27,13 @@ spec:
             - name: SERVICE_API_KEY
               valueFrom:
                 configMapKeyRef:
-                  name: payment-service
+                  name: account-service
                   key: SERVICE_API_KEY
             - name: MYSQL_PASSWORD
               valueFrom:
                 configMapKeyRef:
-                  name: payment-service
-                  key: MYSQL_PASSWORD
-            - name: JWT_SECRET
-              valueFrom:
-                configMapKeyRef:
                   name: account-service
-                  key: JWT_SECRET
+                  key: MYSQL_PASSWORD
             - name: AUTHENTICATE_SERVICE
               valueFrom:
                 configMapKeyRef:

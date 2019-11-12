@@ -3,7 +3,6 @@ kind: Deployment
 metadata:
   name: shipping-service
   labels:
-    environment: dev
     app: shipping-service
 spec:
   replicas: 1

@@ -3,7 +3,6 @@ kind: Deployment
 metadata:
   name: catalogue-service
   labels:
-    environment: dev
     app: catalogue-service
 spec:
   replicas: 1

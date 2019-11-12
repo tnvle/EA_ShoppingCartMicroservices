@@ -6,5 +6,4 @@ metadata:
 data:
   MYSQL_PASSWORD: password
   SERVICE_API_KEY: vanapikey
-  JWT_SECRET: jwtsecret
   AUTHENTICATE_SERVICE: authentication-service

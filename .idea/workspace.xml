@@ -2,18 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fa2f120-c5bf-46f6-b459-0fe23b856209" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/order.Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/order.Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/payment.Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/payment.Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/pppayment.Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/pppayment.Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/shipping.Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/shipping.Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/k8s/config/account_config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/config/account_config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/config/order_config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/config/order_config.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/k8s/deploy/account_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/account_deploy.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/k8s/deploy/authentication_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/authentication_deploy.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/deploy/catalogue_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/catalogue_deploy.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/deploy/inventory_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/inventory_deploy.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/k8s/deploy/order_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/order_deploy.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/deploy/payment_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/payment_deploy.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/deploy/pppayment_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/pppayment_deploy.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/k8s/deploy/shipping_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/shipping_deploy.yaml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -519,7 +515,8 @@
       <workItem from="1573402364049" duration="11894000" />
       <workItem from="1573442791322" duration="5380000" />
       <workItem from="1573477824968" duration="1450000" />
-      <workItem from="1573479332166" duration="18181000" />
+      <workItem from="1573479332166" duration="18340000" />
+      <workItem from="1573522944549" duration="572000" />
     </task>
     <task id="LOCAL-00001" summary="building docker file and k8s files &#10;added ports to application.properties to bank, catalogue, ccpayment">
       <created>1573444697314</created>
@@ -612,7 +609,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573518227583</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="update ports in docker files, deployment, and config, stage 2">
+      <created>1573522476896</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1573522476897</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -643,7 +647,8 @@
     <MESSAGE value="updated application.properties for inventory service" />
     <MESSAGE value="a lot of updates in docker files, new yaml files, and let's hope for the best" />
     <MESSAGE value="update ports in docker files , stage 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="update ports in docker files , stage 1" />
+    <MESSAGE value="update ports in docker files, deployment, and config, stage 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="update ports in docker files, deployment, and config, stage 2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
