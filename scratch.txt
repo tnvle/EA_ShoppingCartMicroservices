@@ -5,7 +5,13 @@ from this folder
 to connect to cloudSQL through 3309 on localhost
 with root/complex password from Lastpass
 
-
-expose mysql service to local host port 8080
-gcloud container clusters get-credentials eaproject --zone us-central1-a --project eaminiproj02-258521 \
- && kubectl port-forward $(kubectl get pod --selector="app=mysql" --output jsonpath='{.items[0].metadata.name}') 8080:3306
+account: 8080
+authenticate: 8888
+bankaccount: 8001
+catalog: 8111
+creditcard: 8002
+inventory:8004
+order: 8084
+payment: 8885
+paypal:8003
+shipping: 8086
