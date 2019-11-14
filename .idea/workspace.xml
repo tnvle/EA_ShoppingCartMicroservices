@@ -2,13 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fa2f120-c5bf-46f6-b459-0fe23b856209" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/k8s/service/account_svc.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/k8s/service/authentication_svc.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/k8s/config/account_config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/config/account_config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/deploy/account_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/account_deploy.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/deploy/authentication_deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deploy/authentication_deploy.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/config/authentication_config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/config/authentication_config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/config/bankpayment_config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/config/bankpayment_config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/config/catalogue_config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/config/catalogue_config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/config/ccpayment_config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/config/ccpayment_config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/config/inventory_config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/config/inventory_config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/config/order_config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/config/order_config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/config/payment_config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/config/payment_config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/config/pppayment_config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/config/pppayment_config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/config/shipping_config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/config/shipping_config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/secret/account_secret.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/secret/account_secret.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/secret/authentication_secret.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/secret/authentication_secret.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/secret/bankpayment_secret.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/secret/bankpayment_secret.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/secret/catalogue_secret.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/secret/catalogue_secret.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/secret/ccpayment_secret.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/secret/ccpayment_secret.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/secret/inventory_secret.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/secret/inventory_secret.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/secret/order_secret.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/secret/order_secret.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/secret/payment_secret.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/secret/payment_secret.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/secret/pppayment_secret.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/secret/pppayment_secret.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/secret/shipping_secret.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/secret/shipping_secret.yaml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -92,7 +108,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="TEXT" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/k8s/service" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -511,7 +527,9 @@
       <workItem from="1573477824968" duration="1450000" />
       <workItem from="1573479332166" duration="18340000" />
       <workItem from="1573522944549" duration="785000" />
-      <workItem from="1573523900385" duration="2366000" />
+      <workItem from="1573523900385" duration="2521000" />
+      <workItem from="1573683470830" duration="267000" />
+      <workItem from="1573732086433" duration="199000" />
     </task>
     <task id="LOCAL-00001" summary="building docker file and k8s files &#10;added ports to application.properties to bank, catalogue, ccpayment">
       <created>1573444697314</created>
@@ -611,7 +629,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573522476897</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="added 2 services in the k8s folder">
+      <created>1573527428198</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1573527428198</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -643,7 +668,8 @@
     <MESSAGE value="a lot of updates in docker files, new yaml files, and let's hope for the best" />
     <MESSAGE value="update ports in docker files , stage 1" />
     <MESSAGE value="update ports in docker files, deployment, and config, stage 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="update ports in docker files, deployment, and config, stage 2" />
+    <MESSAGE value="added 2 services in the k8s folder" />
+    <option name="LAST_COMMIT_MESSAGE" value="added 2 services in the k8s folder" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

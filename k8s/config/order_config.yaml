@@ -6,7 +6,7 @@ metadata:
 data:
   MYSQL_PASSWORD: password
   SERVICE_API_KEY: vanapikey
-  AUTHENTICATE_SERVICE: authentication-service
-  PAYMENT_SERVICE: payment-service
-  SHIPPING_SERVICE: shipping-service
-  CATALOG_SERVICE: catalogue-service
+  AUTHENTICATE_SERVICE: authentication-service.default.svc.cluster.local:8888
+  PAYMENT_SERVICE: payment-service.default.svc.cluster.local:8001
+  SHIPPING_SERVICE: shipping-service.default.svc.cluster.local:8002
+  CATALOG_SERVICE: catalogue-service.default.svc.cluster.local:8003

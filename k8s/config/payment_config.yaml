@@ -6,6 +6,6 @@ metadata:
 data:
   MYSQL_PASSWORD: password
   SERVICE_API_KEY: vanapikey
-  bankaccountsvc: bankpayment-service
-  creditcardsvc: creditcardpayment-service
-  paypalsvc: paypalpayment-service
+  bankaccountsvc: bankpayment-service.default.svc.cluster.local:8001
+  creditcardsvc: creditcardpayment-service.default.svc.cluster.local:8002
+  paypalsvc: paypalpayment-service.default.svc.cluster.local:8003
